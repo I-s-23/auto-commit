@@ -94,6 +94,7 @@ async fn main() -> Result<(), ()> {
             output
         ))
         // .engine("code-davinci-002")
+        .engine("text-davinci-003")
         .temperature(0.0)
         .max_tokens(1000)
         .stop(vec!["EOF".into()]);
