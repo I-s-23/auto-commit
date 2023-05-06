@@ -93,9 +93,9 @@ async fn main() -> Result<(), ()> {
             "git diff HEAD\\^!\n{}\n\n# Write a commit message describing the changes and the reasoning behind them\ngit commit -F- <<EOF",
             output
         ))
-        .engine("code-davinci-002")
+        // .engine("code-davinci-002")
         .temperature(0.0)
-        .max_tokens(2000)
+        .max_tokens(1000)
         .stop(vec!["EOF".into()]);
 
     let sp: Option<Spinner> = if !cli.dry_run && cli.verbose.is_silent() {
